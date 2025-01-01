@@ -10,6 +10,71 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
   <script src="./header.html"></script>
 
+  <style>
+    .center {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      text-align: left;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .letter {
+      flex: 2;
+      line-height: 1.8;
+      color: white;
+    }
+
+    .letter p {
+      margin: 10px 0;
+    }
+
+    .letter .intro,
+    .letter .closing {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .images {
+      flex: 1.5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      max-width: 40%;
+    }
+
+    .images img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .big-picture {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .big-picture img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    body {
+      background-color: #5d072a;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+
+
+
+
 </head>
 <body>
 <div class="bg-blue-950">
@@ -135,6 +200,47 @@
         <div class="mt-10 flex items-center justify-center gap-x-6">
         </div>
       </div>
+
+
+
+      <div class="center">
+        <div class="letter">
+          <p class="intro">Esteemed delegates and advisors,</p>
+
+          <p>On behalf of the Las Lomas Model UN Conference Secretariat, we’d like to welcome you to LLMUNC ‘25, our first-ever conference! We’re a one-day conference with 5 committees — no position papers needed. From debating the political situation in the South China Sea to an ADHOC mystery, there’s sure to be something at LLMUNC ‘25 for everyone.</p>
+
+          <p>Las Lomas High is conveniently located in Walnut Creek, CA, an up-and-coming hub for its atmosphere and food. With plenty of places to explore during breaks, LLMUNC ‘25 is an experience beyond the four walls of a committee session. Additionally, our team of Las Lomas/Amador Valley chairs with competitive experience at local and collegiate conferences are able to provide advice for first-timers and advanced feedback for experienced delegates. All levels of experience welcome!</p>
+
+          <p><b>LLMUNC Information:</b><br>
+            One-day conference on 2/22/25<br>
+            5 committees<br>
+            No position papers.
+          </p>
+
+          <p>Registration opens on January 8th and closes on February 10th. We wish each delegate the best of luck and hope to see them at LLMUNC ‘25!</p>
+
+          <p class="closing">Very Truly Yours,</p>
+
+          <p>Kimberly Huang & Harrshwin Sivakumaran Thangaraj<br>
+            LLMUNC ‘25 Secretaries-General<br>
+            Questions? llmodelunclub@gmail.com</p>
+        </div>
+
+        <div class="images">
+          <img src="/img/llmun.png" alt="Image 1">
+          <img src="/img/llmun.png" alt="Image 2">
+          <img src="/img/llmun.png" alt="Image 3">
+        </div>
+      </div>
+
+      <div class="big-picture">
+        <img src="/img/llmun.png" alt="Big Center Image">
+      </div>
+
+
+      </div>
+
+
     </div>
 
 
@@ -190,6 +296,32 @@
 </script>
 
 <style>
+  .dropdown:focus-within .dropdown-menu {
+    /* @apply block; */
+    display:block;
+  }
+  body{
+    background-color: #5d072a;
+  }
+  #timer {
+    font-size: 3em;
+    font-weight: 100;
+    color: white;
+    text-shadow: 0 0 20px #48C8FF;
+
+    div {
+      display: inline-block;
+      min-width: 90px;
+
+      span {
+        color: #B1CDF1;
+        display: block;
+        font-size: .35em;
+        font-weight: 400;
+      }
+    }
+  }
+
   .dropdown:focus-within .dropdown-menu {
     /* @apply block; */
     display:block;
