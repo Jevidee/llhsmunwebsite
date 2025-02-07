@@ -339,6 +339,55 @@
 </style>
 
 
+
+<div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-xl flex items-center justify-center z-50 opacity-0 scale-90 rotate-[-15deg] translate-y-[-50px] transition-all duration-700 ease-[cubic-bezier(0.25,1.5,0.5,1)] pointer-events-none">
+  <div class="bg-gradient-to-br from-red-900 to-red-800 text-white p-8 rounded-2xl shadow-2xl max-w-lg transform transition-all duration-700 ease-[cubic-bezier(0.25,1.5,0.5,1)] scale-90 rotate-[-10deg] border border-yellow-300/50">
+    <h2 class="text-2xl font-extrabold mb-4 text-whiteIg drop-shadow-lg animate-pulse">🚨 Important Announcement 🚨</h2>
+    <p class="mb-3 text-lg">Please sign and send the following documents.</p>
+    <ul class="mb-4 space-y-2">
+      <li><a href="documents/RegistrationForm.pdf" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:underline hover:text-yellow-400 transition-all duration-300">📄 Registration Form </a></li>
+      <li><a href="documents/MediaRelease.pdf" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:underline hover:text-yellow-400 transition-all duration-300">📄 Media Release Form</a></li>
+    </ul>
+    <button id="closePopup" class="bg-yellow-400 text-[#5d072a] font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-yellow-500 transition-all duration-300 transform hover:scale-110">Close</button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("popupModal");
+    const closeBtn = document.getElementById("closePopup");
+
+    // :rocket: Super Crazy Entrance Animation
+    setTimeout(() => {
+      popup.classList.remove("opacity-0", "scale-90", "rotate-[-15deg]", "translate-y-[-50px]", "pointer-events-none");
+      popup.classList.add("opacity-100", "scale-100", "rotate-0", "translate-y-0");
+    }, 100);
+
+    // :fire: Extra Flair Exit Animation
+    closeBtn.addEventListener("click", () => {
+      popup.classList.remove("opacity-100", "scale-100", "rotate-0", "translate-y-0");
+      popup.classList.add("opacity-0", "scale-90", "rotate-[15deg]", "translate-y-[-50px]", "pointer-events-none");
+
+      // :rotating_light: Add a "shake" effect on close for fun
+      popup.classList.add("animate-wiggle");
+      setTimeout(() => popup.classList.remove("animate-wiggle"), 500);
+    });
+  });
+</script>
+
+<style>
+  /* :performing_arts: Wiggle Effect for Closing */
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg) translateY(0); }
+    25% { transform: rotate(2deg) translateY(-3px); }
+    50% { transform: rotate(-2deg) translateY(3px); }
+    75% { transform: rotate(1deg) translateY(-2px); }
+  }
+  .animate-wiggle { animation: wiggle 0.3s ease-in-out; }
+</style>
+
+
+
 <footer class= " text-white py-6" style="background-color: #44021b ; ">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col items-center">
